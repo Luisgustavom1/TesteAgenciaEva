@@ -11,6 +11,20 @@ export const Container = styled.section`
   div + div {
     margin-left: 15%;
   }
+
+  @media(max-width: 900px) {
+    div + div {
+      margin-left: 5%;
+    }
+  }
+
+  @media(max-width: 750px) {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    
+    div + div {
+      margin-left: 0;
+    }
+  }
 `;
-  
-    // gap: 17.4rem;
