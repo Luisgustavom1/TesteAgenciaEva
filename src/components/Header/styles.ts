@@ -6,7 +6,7 @@ export const Container = styled.header`
   background-color: ${({ theme }) => theme.bwBlack};
   color: ${({ theme }) => theme.bwWhite};
 
-  padding: 1.6rem 16.9rem 1.6rem 16.4rem;
+  padding: 1.6rem 16.4rem;
 
   font-weight: 300;
 
