@@ -8,7 +8,6 @@ export const Container = styled.header`
 
   padding: 1.6rem 16.9rem 1.6rem 16.4rem;
 
-  font-size: 1.6rem;
   font-weight: 300;
 
   display: flex;

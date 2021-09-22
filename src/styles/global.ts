@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       overflow-x: hidden;
+      
+      font-size: 1.6rem;
     }
 
     body, button, input, text-area {
