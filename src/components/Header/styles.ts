@@ -68,14 +68,13 @@ export const ContainerDropdown = styled.span`
       top: 2rem;
       
       opacity: .25;
+      
       transition: all 150ms ease-in;
       transform: rotateX(-90deg);
       transform-origin: top center;
 
       li {
         padding: .8rem 1.6rem;
-
-        border-radius: .4rem;
 
         background-color: ${({ theme }) => theme.bwWhite};
         
@@ -85,6 +84,14 @@ export const ContainerDropdown = styled.span`
 
         & + li {
           border-top: 1px solid #DADFEB;
+        }
+
+        &:first-child {
+          border-radius: .4rem .4rem 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 .4rem .4rem;
         }
       }
     }

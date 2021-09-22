@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
     }
 
+    body {
+      overflow-x: hidden;
+    }
+
     body, button, input, text-area {
         font-family: 'Roboto', sans-serif;
     } 
