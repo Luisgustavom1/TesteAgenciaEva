@@ -4,11 +4,18 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8rem;
+  gap: 6rem;
 
   color: ${({ theme }) => theme.brandPrimary};
 
-  margin-top: 7rem;
+  padding: 7rem 2rem;
+
+  span {
+    content: '';
+    background: #DADFEB;
+    width: .1rem;
+    height: 7.7rem;
+  }
 
   div {
     text-align: center;
@@ -17,10 +24,12 @@ export const Container = styled.section`
       width: 5rem;
     }
   }
-  span {
-    content: '';
-    background: #DADFEB;
-    width: .1rem;
-    height: 7.7rem;
+ 
+  @media(max-width: 500px) {
+    gap: 3rem;
+  }
+
+  @media(max-width: 380px) {
+    gap: 1.5rem;
   }
 `;
