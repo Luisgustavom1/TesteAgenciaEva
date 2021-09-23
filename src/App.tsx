@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 
 import Banner from "./components/Banner";
 import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Newsletter from "./components/Newsletter";
 import SectionCategories from "./components/SectionCategories";
@@ -78,6 +79,7 @@ function App() {
         />
       </SlideContainer>
       <Newsletter />
+      <Footer />
     </ThemeProvider>
   );
 }

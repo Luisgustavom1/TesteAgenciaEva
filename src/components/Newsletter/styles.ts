@@ -28,9 +28,8 @@ export const Container = styled.section`
   form {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.8rem;
-
-    margin: 0 auto;
     label {
       position: absolute;
       height: 1px;
