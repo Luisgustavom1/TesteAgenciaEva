@@ -33,6 +33,18 @@ export const Container = styled.header`
       filter: brightness(.8);
     }
   }
+  
+  @media(max-width: 1050px) {
+    padding: 1.6rem 10.4rem;
+  }
+
+  @media(max-width: 900px) {
+    padding: 1.6rem 3rem;
+  }
+
+  @media(max-width: 760px) {
+    
+  }
 `;
 
 export const Busca = styled.span`

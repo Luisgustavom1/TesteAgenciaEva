@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Banner from "./components/Banner";
 import Cards from "./components/Cards";
 import Header from "./components/Header";
+import Newsletter from "./components/Newsletter";
 import SectionCategories from "./components/SectionCategories";
 import SectionIllustration from "./components/SectionIllustration";
 import SlideContainer from "./components/SlideContainer";
@@ -76,6 +77,7 @@ function App() {
           discount={15}
         />
       </SlideContainer>
+      <Newsletter />
     </ThemeProvider>
   );
 }
