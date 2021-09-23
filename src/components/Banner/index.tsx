@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Container } from './styles';
+import { AsideStyle, Container, CountBanner } from './styles';
 
 import banner from '../../assets/images/banner.jpeg';
 import category1 from '../../assets/images/category-1.jpeg';
@@ -14,39 +14,37 @@ const Banner: React.FC = () => {
     <Container
       banner={currentBanner}
     >
-    <aside>
+    <AsideStyle>
       <h1>Seus Livros Favoritos</h1>
       <p>Estão te esperando aqui</p>
-      <div>
-        <span>
-          <input 
-            type="radio" 
-            name="banner" 
-            id="banner1" 
-            checked
-            onChange={() => setCurrentBanner(banner)} 
-          />
-          <input 
-            type="radio" 
-            name="banner" 
-            id="banner2"
-            onChange={() => setCurrentBanner(category1)} 
-          />
-          <input 
-            type="radio" 
-            name="banner" 
-            id="banner3" 
-            onChange={() => setCurrentBanner(category2)} 
-          />
-          <input 
-            type="radio" 
-            name="banner" 
-            id="banner4" 
-            onChange={() => setCurrentBanner(category3)} 
-          />
-        </span>
-      </div>
-    </aside>
+    </AsideStyle>
+    <CountBanner>
+      <input 
+        type="radio" 
+        name="banner" 
+        id="banner1" 
+        checked
+        onChange={() => setCurrentBanner(banner)} 
+      />
+      <input 
+        type="radio" 
+        name="banner" 
+        id="banner2"
+        onChange={() => setCurrentBanner(category1)} 
+      />
+      <input 
+        type="radio" 
+        name="banner" 
+        id="banner3" 
+        onChange={() => setCurrentBanner(category2)} 
+      />
+      <input 
+        type="radio" 
+        name="banner" 
+        id="banner4" 
+        onChange={() => setCurrentBanner(category3)} 
+      />
+    </CountBanner>
     </Container>
   );
 }

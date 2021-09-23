@@ -32,50 +32,54 @@ export const Container = styled.section<ContainerProps>`
 
       transform: rotate(-3deg);
     }
+  `}
+`;
 
-    aside {
-      color: ${theme.bwWhite};
-      
-      padding: 12.6rem 20rem;
+export const AsideStyle = styled.aside`
+  color: ${theme.bwWhite};
+  
+  padding: 12.6rem 20rem;
+  
+  height: 100%;
 
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  p {
+    font-size: 2.4rem;
+  }
+
+  @media(max-width: 565px) {
+    padding: 12.6rem 7rem;
+  }
+`;
+
+export const CountBanner = styled.span`
+  display: flex;
+  justify-content: center;
+
+  margin-top: -4%;
+  input {
+    position: relative;
+
+    &:checked:after{
+      content: '';
+      z-index: 999;
+
+      width: 100%;
       height: 100%;
 
-      h1 {
-        font-size: 4.2rem;
-      }
-      p {
-        font-size: 2.4rem;
-      }
-
-      div {
-        display: grid;
-        place-items: center;
-
-        margin-top: 13%;
-
-        input {
-        position: relative;
-
-        &:checked:after{
-          content: '';
-          z-index: 999;
-  
-          width: 100%;
-          height: 100%;
-  
-          background: ${theme.brandPrimaryLight};
-          
-          position: absolute;
-          top: 0;
-          right: 0;
-          border-radius: 50%;
-        }
-
-        & + input {
-          margin-left: .8rem;
-        }
-      }
-      }
+      background: ${theme.brandPrimaryLight};
+      
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
     }
-  `}
+
+    & + input {
+      margin-left: .8rem;
+    }
+  }
 `;
