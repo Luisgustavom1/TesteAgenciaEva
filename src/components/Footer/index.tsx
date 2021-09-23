@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             src={mapa}
             alt='Icon Mapa'
           />
-          <p>Rua Av. Rio Negro, 1100</p>
+          <address>Rua Av. Rio Negro, 1100</address>
           <p>Jardim Roselandia</p>
           <p>14406-005</p>
           <p>Franca/SP</p>

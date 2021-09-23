@@ -10,8 +10,6 @@ export const Container = styled.div<ContainerProps>`
   justify-content: center;
   gap: 3.3rem;
 
-  margin: 10rem auto;
-
   > div {
     display: flex;
     gap: 3.2rem;

@@ -8,6 +8,7 @@ import Newsletter from "./components/Newsletter";
 import SectionCategories from "./components/SectionCategories";
 import SectionIllustration from "./components/SectionIllustration";
 import SlideContainer from "./components/SlideContainer";
+import SlideForCategory from "./components/SlideForCategory";
 
 import { GlobalStyle } from "./styles/global";
 import { theme } from "./styles/theme";
@@ -20,7 +21,9 @@ function App() {
       <Banner />
       <SectionIllustration />
       <SectionCategories />
-      <SlideContainer>
+      <SlideForCategory
+        category='escritório'
+      >
         <Cards 
           img='https://imgur.com/Ns4nmWq.jpg'
           name='Smartphone Samsung GalaxyA11 64GB Tela 6.4 3GB RAM'
@@ -77,7 +80,7 @@ function App() {
           oldPrice={'257,00'}
           discount={15}
         />
-      </SlideContainer>
+      </SlideForCategory>
       <Newsletter />
       <Footer />
     </ThemeProvider>
