@@ -1,3 +1,4 @@
+import { transparentize } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -56,6 +57,36 @@ export const Container = styled.div`
 
     p {
       font-size: 1rem;
+    }
+  }
+
+  button {
+    background-color: ${({ theme }) => theme.brandPrimary};
+    color: white;
+
+    font-size: 1.6rem;
+
+    width: 22rem;
+    height: 4.2rem;
+
+    border-radius: .8rem;
+
+    margin-top: 1.6rem;
+
+    transition: all 500ms ease-in-out;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+
+    &:hover {
+      background-color: ${({ theme }) => transparentize(.1, theme.brandPrimary)};
+    }
+  }
+
+  &:hover {
+    border: .1rem solid ${({ theme }) => theme.brandPrimary};
+
+    button {
+      transform: rotateX(0);
     }
   }
 `;

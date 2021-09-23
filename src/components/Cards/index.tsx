@@ -45,6 +45,9 @@ const Cards = ({ img, name, currentPrice, oldPrice, discount, stars }: CardsProp
           ou R$ {(Number(currentPrice) * (1 - discount / 100)).toFixed(2)} com {discount}% off no boleto
         </p>
       </section>
+      <button>
+        Comprar
+      </button>
     </Container>
   );
 }

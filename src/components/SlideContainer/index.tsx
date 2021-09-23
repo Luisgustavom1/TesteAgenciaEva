@@ -12,9 +12,10 @@ interface SlideContainerProps {
 const SlideContainer = ({ children }: SlideContainerProps) => {
   const [numberOfSlides, setNumberOfSlides] = useState(0);
 
-  const width = (23.6 * 4) + 3.2 * (4 - 1)
-
   function previousSlide() {
+    if(numberOfSlides === 0) {
+      return;
+    }
     setNumberOfSlides(numberOfSlides + 1);
   }
 
