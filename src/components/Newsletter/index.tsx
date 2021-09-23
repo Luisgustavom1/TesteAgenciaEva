@@ -1,33 +1,34 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 
-import { Container, FormStyle } from './styles';
+import { Container, FormStyle, InputStyle } from './styles';
 
 import newsletter from '../../assets/svg/newsletter.svg';
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState<string>();
   const [nome, setNome] = useState<string>();
-  const [emptys, setEmptys] = useState({
+  const [isEmpty, setIsEmpty] = useState({
     email: false,
     nome: false
   })
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    
+    setIsEmpty({
+      nome: !nome,
+      email: !email
+    });
 
-    if(!email) {
-      setEmptys({
-        ...emptys,
-        email: true
-      })
+    if(!email || !nome) {
+      return;
+    } else {
+      setNome('');
+      setEmail('');
+
+      alert(`${nome} cadastrado(a) na nossa Newsletter com sucesso!`)
     }
 
-    if(!nome) {
-      setEmptys({
-        ...emptys,
-        nome: true
-      })
-    }
   }
 
   return(
@@ -43,27 +44,31 @@ const Newsletter: React.FC = () => {
         onSubmit={(e) => handleSubmit(e)}
       >
         <div>
-          <label>Digite seu nome</label>
-          <input 
-            placeholder='Digite seu nome'
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
+          <div>
+            <label>Digite seu nome</label>
+            <InputStyle
+              isEmpty={isEmpty.nome}
+              placeholder='Digite seu nome'
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Digite seu nome</label>
+            <InputStyle
+              isEmpty={isEmpty.email}
+              placeholder='Digite seu email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
         </div>
-        <div>
-          <label>Digite seu nome</label>
-          <input 
-            placeholder='Digite seu nome'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <button
+          type='submit'
+        >
+          Eu quero novidades
+        </button>
       </FormStyle>
-      <button
-        type='submit'
-      >
-        Eu quero novidades
-      </button>
     </Container>
   );
 }
