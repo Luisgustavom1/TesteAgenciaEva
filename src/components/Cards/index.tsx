@@ -2,13 +2,13 @@ import { Container } from './styles';
 
 import estrelaCheia from '../../assets/svg/estrela-cheia.svg';
 import estrelaVazia from '../../assets/svg/estrela.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface CardsProps {
   img: string;
   name: string;
   currentPrice: string;
-  oldPrice?: string;
+  oldPrice: string;
   discount: number;
   stars: number;
 }

@@ -10,3 +10,21 @@ export type typeTheme = {
     brandPrimaryLight: string,
     brandPrimaryDark: string
 } 
+
+export type ProductType = {
+  images: [
+    {
+      path: string
+    }
+  ],
+  name: string,
+  price: string,
+  promotional_price: string,
+  stars: number
+}
+
+export type CategoriesType = {
+  bankslip_discount: number,
+  name: string,
+  product: ProductType[]
+}

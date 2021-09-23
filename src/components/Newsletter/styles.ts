@@ -25,30 +25,6 @@ export const Container = styled.section`
     }
   }
 
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.8rem;
-    label {
-      position: absolute;
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip-path: rect(0,0,0,0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-
-    input {
-      padding: 1rem 17.2rem .6rem .5rem;
-      outline: none;
-      border-radius: .4rem;
-    }
-  }
-
   button {
     width: 266px;
     height: 42px;
@@ -57,5 +33,30 @@ export const Container = styled.section`
 
     background-color: ${({ theme }) => theme.brandPrimary};
     color: ${({ theme }) => theme.bwWhite};
+  }
+`;
+
+export const FormStyle = styled.form`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  
+  label {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  input {
+    padding: 1rem 17.2rem .6rem .5rem;
+    outline: none;
+    border-radius: .4rem;
   }
 `;

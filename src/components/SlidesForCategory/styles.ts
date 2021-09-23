@@ -4,7 +4,7 @@ export const Container = styled.div`
   margin: 6.4rem 0rem;
 
   > section {
-    padding: 0 0 4.2rem 23vw;
+    padding: 0 0 4.2rem 15.5vw;
 
     span {
       display: flex;

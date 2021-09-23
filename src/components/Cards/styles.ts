@@ -71,11 +71,9 @@ export const Container = styled.div`
 
     border-radius: .8rem;
 
-    margin-top: 1.6rem;
+    margin: 1.6rem auto 0 auto;
 
-    transition: all 500ms ease-in-out;
-    transform-origin: top center;
-    transform: rotateX(-90deg);
+    display: none;
 
     &:hover {
       background-color: ${({ theme }) => transparentize(.1, theme.brandPrimary)};
@@ -85,8 +83,8 @@ export const Container = styled.div`
   &:hover {
     border: .1rem solid ${({ theme }) => theme.brandPrimary};
 
-    button {
-      transform: rotateX(0);
+    > button {
+      display: block;
     }
   }
 `;

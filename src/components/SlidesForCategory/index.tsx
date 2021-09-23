@@ -6,16 +6,19 @@ import { Container } from './styles';
 interface SlideForCategoryProps {
   children: ReactNode;
   category: string; 
+  numberOfProducts: number;
 }
 
-const SlideForCategory = ({ children, category }: SlideForCategoryProps) => {
+const SlideForCategory = ({ children, category, numberOfProducts }: SlideForCategoryProps) => {
   return(
     <Container>
       <section>
         <span />
         <h1>Destaques em {category}</h1>
       </section>
-      <SlideContainer>
+      <SlideContainer
+        numberOfProducts={numberOfProducts}
+      >
         {children}
       </SlideContainer>
     </Container>

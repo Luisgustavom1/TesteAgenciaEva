@@ -7,15 +7,14 @@ import { Container } from './styles';
 
 interface SlideContainerProps {
   children: ReactNode;
+  numberOfProducts: number
 }
 
-const SlideContainer = ({ children }: SlideContainerProps) => {
+const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => {
   const [numberOfSlides, setNumberOfSlides] = useState(0);
-
+  console.log(numberOfSlides);
+  
   function previousSlide() {
-    if(numberOfSlides === 0) {
-      return;
-    }
     setNumberOfSlides(numberOfSlides + 1);
   }
 
@@ -27,17 +26,23 @@ const SlideContainer = ({ children }: SlideContainerProps) => {
     <Container
       numberOfSlides={numberOfSlides}
     >
-      <img 
-        src={arrowLeft}
-        alt='Imagem da seta esquerda'
-        onClick={() => previousSlide()}
-      />
+      {
+        numberOfSlides < 0 && 
+        <img 
+          src={arrowLeft}
+          alt='Imagem da seta esquerda'
+          onClick={() => previousSlide()}
+        />
+      }
       <div>{children}</div>
-      <img 
-        src={arrowRight}
-        alt='Imagem da seta direita'
-        onClick={() => nextSlide()}
-      />
+      {
+        - numberOfSlides < (numberOfProducts - 4) &&
+        <img 
+          src={arrowRight}
+          alt='Imagem da seta direita'
+          onClick={() => nextSlide()}
+        />
+      }
     </Container>
   );
 }
