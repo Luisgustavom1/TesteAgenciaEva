@@ -15,12 +15,7 @@ interface CardsProps {
 
 const Cards = ({ img, name, currentPrice, oldPrice, discount, stars }: CardsProps) => {
   const [fullStars, setFullStars] = useState(Array(stars).fill(true).concat(Array(5 - stars).fill(false)));
-  useEffect(() => {
-    console.log(Number(currentPrice) * (1 - discount / 100));
-    console.log('currentPrice', Number(currentPrice));
-    console.log('discount', discount);
-    
-  }, [])
+
   return(
     <Container>
       <img
@@ -47,7 +42,7 @@ const Cards = ({ img, name, currentPrice, oldPrice, discount, stars }: CardsProp
           R$ {currentPrice}
         </h3>
         <p>
-          ou R$ {Number(currentPrice) * (1 - discount / 100)} com {discount}% off no boleto
+          ou R$ {(Number(currentPrice) * (1 - discount / 100)).toFixed(2)} com {discount}% off no boleto
         </p>
       </section>
     </Container>
