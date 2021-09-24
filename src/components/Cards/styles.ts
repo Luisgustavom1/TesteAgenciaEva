@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 23.6rem;
+  height: 40.5rem;
 
   border-radius: .4rem;
 
@@ -83,7 +84,8 @@ export const Container = styled.div`
 
   &:hover {
     border: .1rem solid ${({ theme }) => theme.brandPrimary};
-
+    height: auto;
+    
     > button {
       display: block;
     }
