@@ -9,14 +9,10 @@ export const Container = styled.header<ContainerProps>`
     width: 100vw;
 
     background-color: ${theme.bwBlack};
-    color: ${theme.bwWhite};
 
     padding: 1.6rem 16.4rem;
 
-    font-weight: 300;
-
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     > div {
@@ -27,11 +23,16 @@ export const Container = styled.header<ContainerProps>`
       justify-content: space-between;
 
       transition: 500ms ease-in-out;
+
+      font-weight: 300;
+      color: ${theme.bwWhite};
     }
 
     .logo {
       height: 3.2rem;
       width: 8rem;
+
+      margin-right: 9.4rem;
     }
 
     img {
@@ -61,7 +62,7 @@ export const Container = styled.header<ContainerProps>`
       padding: 1.6rem 3rem;
     }
 
-    @media(max-width: 730px) {
+    @media(max-width: 730px) {      
       > div {
         flex-direction: column;
         justify-content: flex-start;
@@ -74,14 +75,14 @@ export const Container = styled.header<ContainerProps>`
         z-index: 1;
         visibility: ${showMenu ? 'visible' : 'hidden'};
         overflow-y: hidden;
-        
+
         top: 6.4rem;
         right: 0;
 
-        width: 60%;
-        height: ${showMenu ? 'calc(100vh - 6.4rem)' : '6.4rem'};
+        width: 70%;
+        height: ${showMenu ? 'calc(100vh - 6.4rem)' : '0'};
 
-        background-color: ${theme.bwBlack2};
+        background-color: ${showMenu && theme.bwBlack2};
 
         font-weight: 400;
         font-size: 1.8rem;

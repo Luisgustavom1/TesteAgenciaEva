@@ -6,7 +6,6 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 3.3rem;
 

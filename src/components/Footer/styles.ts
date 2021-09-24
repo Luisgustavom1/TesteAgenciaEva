@@ -55,9 +55,13 @@ export const Container = styled.footer`
         gap: 5rem;
       }
 
-      @media(max-width: 706) {
+      @media(max-width: 706px) {
         gap: 2rem;
       }
+    }
+
+    @media(max-width: 505px) {
+      padding: 3.2rem 5rem;
     }
   `}
 `;
