@@ -12,7 +12,17 @@ export const Container = styled.div`
 
     text-align: center;
 
+    overflow: hidden;
+
     background-color: ${theme.bwWhite1};
+
+    &:hover {
+      border: .1rem solid ${theme.brandPrimary};
+      height: auto;
+      button {
+        opacity: 1;
+      }
+    }
 
     > img {
       width: 100%;
@@ -75,19 +85,11 @@ export const Container = styled.div`
 
       margin: 1.6rem auto 0 auto;
 
-      display: none;
+      opacity: 0; 
+      transition: opacity 200ms ease-in;
 
       &:hover {
         filter: brightness(.9)
-      }
-    }
-
-    &:hover {
-      border: .1rem solid ${theme.brandPrimary};
-      height: auto;
-
-      button {
-        display: block;
       }
     }
   `}
