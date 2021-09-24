@@ -13,5 +13,10 @@ export const Container = styled.section`
     align-items: center;
 
     gap: 5rem;
+
+    div {
+      width: 30rem;
+      height: auto;
+    }
   }
 `;

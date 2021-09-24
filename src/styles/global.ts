@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-size: 62.5%;
+      font-size: 62.5%;
     }
 
     body {
@@ -30,21 +30,17 @@ export const GlobalStyle = createGlobalStyle`
       list-style: none;
     } 
 
-    .teste {
-      width: 200px;
-      min-height: 10px;
-      background-color: red;
-      margin: 20px;
-      padding: 20px;
-      transition: .5s;
-      input {
-        visibility: hidden;
-      }
-      &:hover {      
-
-        input {
-          visibility: visible;
-        }
+    @media (max-width: 1080px) {
+      html {
+        font-size: 55%;
       }
     }
+
+    @media (max-width: 720px) {
+      html {
+        font-size: 48.5%;
+      }
+    }
+
+    
 `;

@@ -50,21 +50,6 @@ const Pages: React.FC = () => {
       }
       <Newsletter />
       <Footer />
-      <div 
-      className='teste'>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-
-      </div>
     </>
   );
 }

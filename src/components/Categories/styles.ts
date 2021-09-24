@@ -20,11 +20,6 @@ export const Container = styled.div<ContainerProps>`
   p {
     padding-top: 90%;
   }
-
-  @media(max-width: 750px) {
-    width: 30rem;
-    height: auto;
-  }
 `;
 
 // background:

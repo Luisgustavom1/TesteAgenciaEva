@@ -54,12 +54,8 @@ export const Container = styled.header<ContainerProps>`
       display: none;
     }
 
-    @media(max-width: 1050px) {
-      padding: 1.6rem 10.4rem;
-    }
-
     @media(max-width: 900px) {
-      padding: 1.6rem 3rem;
+      padding: 1.6rem 5rem;
     }
 
     @media(max-width: 730px) {      

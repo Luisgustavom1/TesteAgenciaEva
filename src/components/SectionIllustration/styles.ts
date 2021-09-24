@@ -28,12 +28,8 @@ export const Container = styled.section`
       width: 5rem;
     }
   }
- 
-  @media(max-width: 600px) {
-    gap: 3rem;
-  }
 
-  @media(max-width: 430px) {
-    gap: 1.5rem;
+  @media(max-width: 448px) {
+    gap: 2rem;
   }
 `;

@@ -81,6 +81,6 @@ export const CountBanner = styled.span`
   }
 
   @media(max-width: 565px) {
-    margin-top: -5%;
+    margin-top: -6%;
   }
 `;
