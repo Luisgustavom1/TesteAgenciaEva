@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
         type="radio" 
         name="banner" 
         id="banner1" 
-        checked
+        
         onChange={() => setCurrentBanner(banner)} 
       />
       <input 

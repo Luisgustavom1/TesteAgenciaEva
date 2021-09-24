@@ -1,59 +1,115 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.header`
-  width: 100vw;
+interface ContainerProps {
+  showMenu: boolean
+}
 
-  background-color: ${({ theme }) => theme.bwBlack};
-  color: ${({ theme }) => theme.bwWhite};
+export const Container = styled.header<ContainerProps>`
+  ${({ theme, showMenu }) => css`
+    width: 100vw;
 
-  padding: 1.6rem 16.4rem;
+    background-color: ${theme.bwBlack};
+    color: ${theme.bwWhite};
 
-  font-weight: 300;
+    padding: 1.6rem 16.4rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    font-weight: 300;
 
-  img:first-child {
-    height: 3.2rem;
-    width: 8rem;
-  }
-
-  img {
-    height: 1.6rem;
-    width: 1.4rem;
-  }
-
-  span {
     display: flex;
     align-items: center;
-    gap: .8rem;
+    justify-content: space-between;
 
-    & + span:hover {
-      filter: brightness(.8);
+    > div {
+      width: 90%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      transition: 500ms ease-in-out;
     }
-  }
-  
-  @media(max-width: 1050px) {
-    padding: 1.6rem 10.4rem;
-  }
 
-  @media(max-width: 900px) {
-    padding: 1.6rem 3rem;
-  }
+    .logo {
+      height: 3.2rem;
+      width: 8rem;
+    }
 
-  @media(max-width: 760px) {
-    
-  }
+    img {
+      height: 1.6rem;
+      width: 1.4rem;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+
+      & + span:hover {
+        filter: brightness(.8);
+      }
+    }
+
+    .menuHamburguer {
+      display: none;
+    }
+
+    @media(max-width: 1050px) {
+      padding: 1.6rem 10.4rem;
+    }
+
+    @media(max-width: 900px) {
+      padding: 1.6rem 3rem;
+    }
+
+    @media(max-width: 730px) {
+      > div {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        gap: 5rem;
+
+        padding-top: 5rem;
+
+        position: absolute;
+        z-index: 1;
+        visibility: ${showMenu ? 'visible' : 'hidden'};
+        overflow-y: hidden;
+        
+        top: 6.4rem;
+        right: 0;
+
+        width: 60%;
+        height: ${showMenu ? 'calc(100vh - 6.4rem)' : '6.4rem'};
+
+        background-color: ${theme.bwBlack2};
+
+        font-weight: 400;
+        font-size: 1.8rem;
+        span {
+          order: 1;        
+        }
+      }
+
+      .menuHamburguer {
+        display: block;
+      } 
+    }
+  `}
 `;
 
-export const Busca = styled.span`
+export const Busca = styled.div`
   width: 37%;
+  min-width: 22rem;
   height: 3.2rem;
 
   background-color: ${({ theme }) => theme.bwWhite};
 
+  border-radius: .5rem;
+
   padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
 
   input {
     width: 92%;
@@ -62,49 +118,51 @@ export const Busca = styled.span`
 `;
 
 export const ContainerDropdown = styled.span`
-  &:hover ul{
-    transform: rotateX(0);
-    opacity: 1;
-  }
-  
-  div {
-    color: ${({ theme }) => theme.bwBlack};
-    position: relative;
+  ${({ theme }) => css`
+    &:hover ul{
+      transform: rotateX(0);
+      opacity: 1;
+    }
+    
+    nav {
+      color: ${theme.bwBlack};
+      position: relative;
 
-    ul {
-      position: absolute;
-      z-index: 999;
+      ul {
+        position: absolute;
+        z-index: 999;
 
-      right: 50%;
-      top: 2rem;
-      
-      opacity: .25;
-      
-      transition: all 150ms ease-in;
-      transform: rotateX(-90deg);
-      transform-origin: top center;
-
-      li {
-        padding: .8rem 1.6rem;
-
-        background-color: ${({ theme }) => theme.bwWhite};
+        right: 50%;
+        top: 2rem;
         
-        &:hover {
-          background-color: ${({ theme }) => theme.bwWhite2};
-        }
+        opacity: .25;
+        
+        transition: all 150ms ease-in;
+        transform: rotateX(-90deg);
+        transform-origin: top center;
 
-        & + li {
-          border-top: 1px solid #DADFEB;
-        }
+        li {
+          padding: .8rem 1.6rem;
 
-        &:first-child {
-          border-radius: .4rem .4rem 0 0;
-        }
+          background-color: ${theme.bwWhite};
+          
+          &:hover {
+            background-color: ${theme.bwWhite2};
+          }
 
-        &:last-child {
-          border-radius: 0 0 .4rem .4rem;
+          & + li {
+            border-top: 1px solid #DADFEB;
+          }
+
+          &:first-child {
+            border-radius: .4rem .4rem 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 .4rem .4rem;
+          }
         }
       }
     }
-  }
+  `}
 `;

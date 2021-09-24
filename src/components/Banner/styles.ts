@@ -59,7 +59,7 @@ export const CountBanner = styled.span`
   display: flex;
   justify-content: center;
 
-  margin-top: -4%;
+  margin-top: -2%;
   input {
     position: relative;
 
@@ -81,5 +81,9 @@ export const CountBanner = styled.span`
     & + input {
       margin-left: .8rem;
     }
+  }
+
+  @media(max-width: 565px) {
+    margin-top: -5%;
   }
 `;
