@@ -1,30 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  padding: 0 16.4rem;
-
-  width: 100vw;
+  width: 80vw;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  
+  margin: 0 auto;
 
-  div + div {
-    margin-left: 15%;
-  }
-
-  @media(max-width: 900px) {
-    div + div {
-      margin-left: 5%;
-    }
-  }
-
-  @media(max-width: 750px) {
-    flex-wrap: wrap;
+  @media(max-width: 890px) {
+    flex-direction: column;
     align-items: center;
-    gap: 3rem;
-    
-    div + div {
-      margin-left: 0;
-    }
+
+    gap: 5rem;
   }
 `;

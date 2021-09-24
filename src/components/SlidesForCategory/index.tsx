@@ -12,10 +12,10 @@ interface SlideForCategoryProps {
 const SlideForCategory = ({ children, category, numberOfProducts }: SlideForCategoryProps) => {
   return(
     <Container>
-      <section>
+      <div>
         <span />
         <h1>Destaques em {category}</h1>
-      </section>
+      </div>
       <SlideContainer
         numberOfProducts={numberOfProducts}
       >

@@ -35,12 +35,14 @@ export const Container = styled.section<ContainerProps>`
 `;
 
 export const AsideStyle = styled.aside`
-  color: ${theme.bwWhite};
-  
-  padding: 12.6rem 15vw;
-  
+  width: 80vw;
   height: 100%;
 
+  color: ${theme.bwWhite};
+  
+  padding: 12.6rem 0;
+    
+  margin: 0 auto;
   h1 {
     font-size: 4.2rem;
   }

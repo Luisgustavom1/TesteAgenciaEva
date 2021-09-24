@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  width: 80vw;
+  
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 6rem;
 
   color: ${({ theme }) => theme.brandPrimary};
 
-  padding: 7rem 2rem;
-
+  margin: 7rem auto;
   span {
     content: '';
     
@@ -27,11 +29,11 @@ export const Container = styled.section`
     }
   }
  
-  @media(max-width: 500px) {
+  @media(max-width: 600px) {
     gap: 3rem;
   }
 
-  @media(max-width: 380px) {
+  @media(max-width: 430px) {
     gap: 1.5rem;
   }
 `;

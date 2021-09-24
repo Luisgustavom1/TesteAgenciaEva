@@ -8,7 +8,7 @@ export const Container = styled.footer`
     color: ${theme.bwWhite};
     font-weight: 300;
     
-    padding: 3.2rem 16.4rem;
+    padding: 3.2rem 0 3.2rem 10vw;
 
     h1 {
       color: ${theme.brandPrimary};
@@ -50,18 +50,6 @@ export const Container = styled.footer`
           }
         }
       }
-
-      @media(max-width: 766px) {
-        gap: 5rem;
-      }
-
-      @media(max-width: 706px) {
-        gap: 2rem;
-      }
-    }
-
-    @media(max-width: 505px) {
-      padding: 3.2rem 5rem;
     }
   `}
 `;
