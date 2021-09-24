@@ -27,8 +27,10 @@ const Pages: React.FC = () => {
       <Banner />
       <SectionIllustration />
       <SectionCategories />
-      {categories.map(category => 
-        category.product.length >= 4 && (
+      {
+        categories.map(category => 
+
+        category.product.length >= 4 &&
           <SlideForCategory
             category={category.name}
             numberOfProducts={category.product.length}
@@ -44,10 +46,25 @@ const Pages: React.FC = () => {
               />
             ))}
           </SlideForCategory>
-        )
-      ) }
+        ) 
+      }
       <Newsletter />
       <Footer />
+      <div 
+      className='teste'>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+
+      </div>
     </>
   );
 }

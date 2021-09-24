@@ -23,7 +23,6 @@ export const Container = styled.section<ContainerProps>`
         linear-gradient(90.99deg, #000000 1.53%, rgba(32, 32, 32, 0.52) 56.83%, rgba(196, 196, 196, 0) 98.06%),
         url(${props.banner}) 
         0 25%;
-      background-size: cover;
 
       position: absolute;
       top: -10%;
@@ -38,7 +37,7 @@ export const Container = styled.section<ContainerProps>`
 export const AsideStyle = styled.aside`
   color: ${theme.bwWhite};
   
-  padding: 12.6rem 20rem;
+  padding: 12.6rem 15vw;
   
   height: 100%;
 
@@ -48,10 +47,6 @@ export const AsideStyle = styled.aside`
 
   p {
     font-size: 2.4rem;
-  }
-
-  @media(max-width: 565px) {
-    padding: 12.6rem 7rem;
   }
 `;
 

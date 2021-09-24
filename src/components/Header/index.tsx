@@ -40,7 +40,7 @@ const Header: React.FC = () => {
         <Busca>
           <input 
             type="text" 
-            placeholder='Search'
+            placeholder='Search Products'
           />
           <img 
             src={busca}

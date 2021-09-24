@@ -12,7 +12,9 @@ export const Container = styled.section`
 
   span {
     content: '';
+    
     background: #DADFEB;
+
     width: .1rem;
     height: 7.7rem;
   }

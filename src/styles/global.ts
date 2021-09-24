@@ -29,4 +29,22 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
       list-style: none;
     } 
+
+    .teste {
+      width: 200px;
+      min-height: 10px;
+      background-color: red;
+      margin: 20px;
+      padding: 20px;
+      transition: .5s;
+      input {
+        visibility: hidden;
+      }
+      &:hover {      
+
+        input {
+          visibility: visible;
+        }
+      }
+    }
 `;

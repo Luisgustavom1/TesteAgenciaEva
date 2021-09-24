@@ -32,7 +32,7 @@ export const Container = styled.header<ContainerProps>`
       height: 3.2rem;
       width: 8rem;
 
-      margin-right: 9.4rem;
+      margin-right: 6vw;
     }
 
     img {
