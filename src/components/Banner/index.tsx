@@ -10,6 +10,12 @@ import category3 from '../../assets/images/category-3.jpeg';
 const Banner: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(banner);
 
+  function handleClick(banner: string, e: any) {
+    setCurrentBanner(banner);
+
+    e.target.checked = true;
+  }
+
   return(
     <Container
       banner={currentBanner}
@@ -23,26 +29,26 @@ const Banner: React.FC = () => {
         type="radio" 
         name="banner" 
         id="banner1" 
-        
-        onChange={() => setCurrentBanner(banner)} 
+        checked
+        onClick={(e) => handleClick(banner, e)} 
       />
       <input 
         type="radio" 
         name="banner" 
         id="banner2"
-        onChange={() => setCurrentBanner(category1)} 
+        onClick={(e) => handleClick(category1, e)} 
       />
       <input 
         type="radio" 
         name="banner" 
         id="banner3" 
-        onChange={() => setCurrentBanner(category2)} 
+        onClick={(e) => handleClick(category2, e)} 
       />
       <input 
         type="radio" 
         name="banner" 
         id="banner4" 
-        onChange={() => setCurrentBanner(category3)} 
+        onClick={(e) => handleClick(category3, e)} 
       />
     </CountBanner>
     </Container>

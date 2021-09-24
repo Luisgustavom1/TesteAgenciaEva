@@ -12,7 +12,6 @@ interface SlideContainerProps {
 
 const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => {
   const [numberOfSlides, setNumberOfSlides] = useState(0);
-  console.log(numberOfSlides);
   
   function previousSlide() {
     setNumberOfSlides(numberOfSlides + 1);
@@ -36,7 +35,7 @@ const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => 
       }
       <div>{children}</div>
       {
-        - numberOfSlides < (numberOfProducts - 4) &&
+        -numberOfSlides < (numberOfProducts - 4) &&
         <img 
           src={arrowRight}
           alt='Imagem da seta direita'
