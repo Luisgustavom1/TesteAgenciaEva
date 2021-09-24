@@ -15,10 +15,16 @@ export const Container = styled.div`
     overflow: hidden;
 
     background-color: ${theme.bwWhite1};
+    border: .1rem solid transparent;
 
+    @keyframes growthCard {
+      to { 
+        height: 45.2rem; 
+        border: .1rem solid ${theme.brandPrimary};
+      }
+    }
     &:hover {
-      border: .1rem solid ${theme.brandPrimary};
-      height: auto;
+      animation: growthCard 250ms ease-in forwards;
       button {
         opacity: 1;
       }
@@ -83,10 +89,10 @@ export const Container = styled.div`
 
       border-radius: .8rem;
 
-      margin: 1.6rem auto 0 auto;
+      margin: 1.2rem auto 0 auto;
 
       opacity: 0; 
-      transition: opacity 200ms ease-in;
+      transition: opacity 250ms;
 
       &:hover {
         filter: brightness(.9)
