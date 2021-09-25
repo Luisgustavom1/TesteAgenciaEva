@@ -11,10 +11,6 @@ export const Container = styled.section`
 
   gap: 3.3rem;
 
-  .arrow, img {
-    user-select: none;
-  }
-
   .arrow:hover {
     transform: scale(1.1);
   }

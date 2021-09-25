@@ -115,6 +115,7 @@ export const Container = styled.div`
       opacity: 0; 
       transition: opacity 250ms;
 
+      cursor: pointer;
       &:hover {
         filter: brightness(.9)
       }

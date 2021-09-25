@@ -18,7 +18,7 @@ export const Container = styled.section<ContainerProps>`
       url(${props.banner}) 
       0% 40% / cover
       no-repeat;
-    
+
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   `}
 `;

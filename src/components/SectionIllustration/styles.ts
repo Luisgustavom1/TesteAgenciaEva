@@ -24,9 +24,9 @@ export const Container = styled.section`
   div {
     text-align: center;
 
-    img {
-      width: 5rem;
-      user-select: none;
+    svg {
+      width: 4.3rem;
+      height: 5rem;
     }
   }
 

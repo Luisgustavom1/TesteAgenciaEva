@@ -42,5 +42,7 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
 
-    
+    svg, img {
+      user-select: none;
+    }
 `;

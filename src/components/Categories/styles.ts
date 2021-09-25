@@ -16,7 +16,7 @@ export const Container = styled.div<ContainerProps>`
 
   text-align: center;
 
-  border-radius: .4rem;
+  border-radius: 4px;
   p {
     padding-top: 90%;
     user-select: none;

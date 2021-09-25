@@ -29,8 +29,6 @@ export const Container = styled.footer`
     .mainSvg {
       width: 2.165rem;
       height: 1.8rem;
-
-      user-select: none;
     }
 
     section {
@@ -39,8 +37,6 @@ export const Container = styled.footer`
       gap: 10rem;
 
       div:first-child {
-        user-select: none;
-
         p {
           cursor: pointer;
         }
@@ -58,8 +54,6 @@ export const Container = styled.footer`
         .secondSvg{
           width: 1.5rem;
           margin-right: .8rem;
-
-          user-select: none;
         }
       }
     }

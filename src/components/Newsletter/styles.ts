@@ -13,7 +13,7 @@ export const Container = styled.div`
     padding: 4.8rem 0;
     margin-top: 4rem;
     
-    img {
+    svg {
       width: 4.86rem;
       height: 3.93rem;
     }
@@ -65,6 +65,7 @@ export const FormStyle = styled.form`
       background-color: ${theme.brandPrimary};
       color: ${theme.bwWhite};
 
+      cursor: pointer;
       &:hover {
         background-color: ${transparentize(0.2, theme.brandPrimary)};
       }
@@ -84,6 +85,7 @@ export const InputStyle = styled.input<InputStyleProps>`
   border-radius: 4px;
   box-shadow: 0 0 0 1px ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : 'none'};
 
+  user-select: none;
   &::placeholder {
     color: ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : theme.bwBlack2};
   }
