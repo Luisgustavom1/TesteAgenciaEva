@@ -23,11 +23,3 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-// background:
-//    url(sweettexture.jpg)    /* image */
-//    top center / 200px 200px /* position / size */
-//    no-repeat                /* repeat */
-//    fixed                    /* attachment */
-//    padding-box              /* origin */
-//    content-box              /* clip */
-//    red;                     /* color */

@@ -12,25 +12,14 @@ export const Container = styled.section<ContainerProps>`
 
     position: relative;
 
-    &:after {
-      content: '';
-
-      width: 106%;
-      height: 111%;
-
-      background: 
-        repeat 
-        linear-gradient(90.99deg, #000000 1.53%, rgba(32, 32, 32, 0.52) 56.83%, rgba(196, 196, 196, 0) 98.06%),
-        url(${props.banner}) 
-        0 25%;
-
-      position: absolute;
-      top: -10%;
-      left: -5%;
-      z-index: -1;
-
-      transform: rotate(-3deg);
-    }
+    background: 
+      repeat 
+      linear-gradient(90.99deg, #000000 1.53%, rgba(32, 32, 32, 0.52) 56.83%, rgba(196, 196, 196, 0) 98.06%),
+      url(${props.banner}) 
+      0% 40% / cover
+      no-repeat;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   `}
 `;
 
@@ -56,7 +45,7 @@ export const CountBanner = styled.span`
   display: flex;
   justify-content: center;
 
-  margin-top: -2%;
+  margin-top: -8vh;
 
   input {
     position: relative;
@@ -80,8 +69,13 @@ export const CountBanner = styled.span`
       margin-left: .8rem;
     }
   }
-
-  @media(max-width: 565px) {
-    margin-top: -6%;
-  }
 `;
+
+// background:
+//    url(sweettexture.jpg)    /* image */
+//    top center / 200px 200px /* position / size */
+//    no-repeat                /* repeat */
+//    fixed                    /* attachment */
+//    padding-box              /* origin */
+//    content-box              /* clip */
+//    red;                     /* color */
