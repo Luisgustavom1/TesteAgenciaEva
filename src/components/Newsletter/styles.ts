@@ -60,7 +60,7 @@ export const FormStyle = styled.form`
       width: 26.6rem;
       height: 4.2rem;
       
-      border-radius: .8rem;
+      border-radius: 8px;
 
       background-color: ${theme.brandPrimary};
       color: ${theme.bwWhite};
@@ -78,11 +78,11 @@ interface InputStyleProps {
 
 export const InputStyle = styled.input<InputStyleProps>`
   width: 27.8rem;
-  padding: 1rem .5rem .6rem .5rem;
+  padding: 10px 5px 6px 5px;
 
   outline: none;
   border-radius: 4px;
-  border: 1px solid ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : 'none'};
+  box-shadow: 0 0 0 1px ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : 'none'};
 
   &::placeholder {
     color: ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : theme.bwBlack2};
