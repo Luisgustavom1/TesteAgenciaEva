@@ -57,12 +57,13 @@ export const CountBanner = styled.span`
   justify-content: center;
 
   margin-top: -2%;
+
   input {
     position: relative;
 
     &:checked:after{
       content: '';
-      z-index: 999;
+      z-index: 1;
 
       width: 100%;
       height: 100%;

@@ -15,6 +15,7 @@ export const Container = styled.header<ContainerProps>`
     display: flex;
     justify-content: space-between;
 
+    user-select: none;
     > div {
       width: 90%;
 
@@ -45,9 +46,7 @@ export const Container = styled.header<ContainerProps>`
       align-items: center;
       gap: .8rem;
 
-      & + span:hover {
-        filter: brightness(.8);
-      }
+      cursor: pointer;
     }
 
     .menuHamburguer {
@@ -68,7 +67,7 @@ export const Container = styled.header<ContainerProps>`
         padding-top: 5rem;
 
         position: absolute;
-        z-index: 1;
+        z-index: 999;
         visibility: ${showMenu ? 'visible' : 'hidden'};
         overflow-y: hidden;
 

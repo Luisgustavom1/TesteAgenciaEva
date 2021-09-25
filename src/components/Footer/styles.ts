@@ -12,6 +12,7 @@ export const Container = styled.footer`
 
     h1 {
       color: ${theme.brandPrimary};
+      font-size: 2.4rem;
     }
 
     span {
@@ -25,14 +26,25 @@ export const Container = styled.footer`
       margin-bottom: 1.8rem;
     }
 
-    img {
-      width: 2.1rem;
+    .mainSvg {
+      width: 2.165rem;
+      height: 1.8rem;
+
+      user-select: none;
     }
 
     section {
       display: flex;
       flex-wrap: wrap;
       gap: 10rem;
+
+      div:first-child {
+        user-select: none;
+
+        p {
+          cursor: pointer;
+        }
+      }
 
       div {
         display: flex;
@@ -43,11 +55,11 @@ export const Container = styled.footer`
           font-weight: 400;
         }
 
-        &:last-child {
-          img {
-            width: 1.5rem;
-            margin-right: .8rem;
-          }
+        .secondSvg{
+          width: 1.5rem;
+          margin-right: .8rem;
+
+          user-select: none;
         }
       }
     }

@@ -11,6 +11,9 @@ export const Container = styled.div`
     width: 80vw;
 
     margin: 0 auto;
+    h1 {
+      font-size: 2.4rem;
+    }
     span {
       display: flex;
 

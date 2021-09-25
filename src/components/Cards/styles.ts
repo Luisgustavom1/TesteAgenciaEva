@@ -15,12 +15,12 @@ export const Container = styled.div`
     overflow: hidden;
 
     background-color: ${theme.bwWhite1};
-    border: .1rem solid transparent;
+    border: 1px solid transparent;
 
     @keyframes growthCard {
       to { 
         height: 45.2rem; 
-        border: .1rem solid ${theme.brandPrimary};
+        border: 1px solid ${theme.brandPrimary};
       }
     }
     &:hover {
@@ -30,23 +30,37 @@ export const Container = styled.div`
       }
     }
 
-    > img {
-      width: 100%;
-      height: 23.6rem;
+    .containerImg {
+      background-color: ${theme.bwWhite};
+
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 23.6rem;
+      }
     }
 
-    section {
-      padding: 0 2.6rem;
+    .containerName {
+      height: 3.5rem;
+      max-width: 19rem;
 
-      h2 {
-        font-size: 1.4rem;
-        font-weight: 300;
+      margin: .8rem auto;
 
-        margin: .8rem 0;
-        text-align: left;
-      }
+      display: flex;
+      justify-content: center;
+    }
 
-      span {
+    .nameOfProduct {
+      font-size: 1.4rem;
+      font-weight: 300;
+
+      text-align: left;
+    }
+    section { 
+
+      .containerStars {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,30 +68,37 @@ export const Container = styled.div`
         gap: .2rem;
 
         margin-bottom: .8rem;  
-        img {
-          width: 1.4rem;
-        }
+      }
+            
+      .stars {
+        width: 1.46rem;
+        height: 1.4rem;
       }
 
       .oldPrice {
         color: ${theme.bwBlack2};
+
         font-size: 1.2rem;
         text-align: right;
+
+        padding-right: 5.4rem;
+
         text-decoration: line-through;
       }
       
-      h3 {
+      .currentPrice {
         font-size: 3.2rem;
         font-weight: 700;
 
         color: ${theme.brandPrimary};
       }
 
-      p {
+      .discount {
         font-size: 1rem;
       }
     }
 
+    
     button {
       background-color: ${theme.brandPrimary};
       color: white;

@@ -19,6 +19,7 @@ export const Container = styled.div<ContainerProps>`
   border-radius: .4rem;
   p {
     padding-top: 90%;
+    user-select: none;
   }
 `;
 

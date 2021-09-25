@@ -11,9 +11,11 @@ export const Container = styled.div`
     gap: 4.8rem;
 
     padding: 4.8rem 0;
+    margin-top: 4rem;
     
     img {
-      width: 4rem;
+      width: 4.86rem;
+      height: 3.93rem;
     }
 
     section {
@@ -55,8 +57,8 @@ export const FormStyle = styled.form`
     }
 
     button {
-      width: 266px;
-      height: 42px;
+      width: 26.6rem;
+      height: 4.2rem;
       
       border-radius: .8rem;
 
@@ -79,8 +81,8 @@ export const InputStyle = styled.input<InputStyleProps>`
   padding: 1rem .5rem .6rem .5rem;
 
   outline: none;
-  border-radius: .4rem;
-  border: .2rem solid ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : 'none'};
+  border-radius: 4px;
+  border: 1px solid ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : 'none'};
 
   &::placeholder {
     color: ${({ isEmpty, theme }) => isEmpty ? theme.brandPrimary : theme.bwBlack2};

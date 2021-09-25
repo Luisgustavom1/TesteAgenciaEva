@@ -66,7 +66,7 @@ const Newsletter: React.FC = () => {
         <button
           type='submit'
         >
-          Eu quero novidades
+          Eu quero receber novidades!
         </button>
       </FormStyle>
     </Container>

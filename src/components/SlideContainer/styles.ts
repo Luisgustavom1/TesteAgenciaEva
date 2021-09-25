@@ -6,11 +6,16 @@ interface CardsSlideProps {
 
 export const Container = styled.section`
   display: flex;
+  align-items: center;
   justify-content: center;
 
   gap: 3.3rem;
 
-  > img:hover {
+  .arrow, img {
+    user-select: none;
+  }
+
+  .arrow:hover {
     transform: scale(1.1);
   }
 `;
@@ -19,11 +24,12 @@ export const CardsSlide = styled.div<CardsSlideProps>`
   display: flex;
   gap: 3.2rem;
 
-  overflow-x: hidden;
+  overflow: hidden;
   
+  height: 45.2rem; 
   width: calc(23.6rem * 4 + calc(3.2rem * (4 - 1)));
 
-  div {
+  > div {
     transition: transform 500ms ease-in-out;
     transform: ${({ numberOfSlides }) => `translateX(${numberOfSlides * (23.6 + 3.2) }rem)`};
 

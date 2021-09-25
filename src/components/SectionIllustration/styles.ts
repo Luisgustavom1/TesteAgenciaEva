@@ -26,6 +26,7 @@ export const Container = styled.section`
 
     img {
       width: 5rem;
+      user-select: none;
     }
   }
 

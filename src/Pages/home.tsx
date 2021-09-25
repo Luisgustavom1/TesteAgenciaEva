@@ -19,7 +19,6 @@ const Pages: React.FC = () => {
         setCategories(data);
       })
       console.log(categories);
-      
   }, []) 
   return(
     <>
@@ -30,22 +29,24 @@ const Pages: React.FC = () => {
       {
         categories.map(category => 
 
-        category.product.length >= 4 &&
-          <SlideForCategory
-            category={category.name}
-            numberOfProducts={category.product.length}
-          >
-            {category.product.map(product => (
-              <Cards 
-                img={product.images[0].path}
-                name={product.name}
-                currentPrice={product.promotional_price}
-                oldPrice={product.price}
-                stars={product.stars}
-                discount={category.bankslip_discount}
-              />
-            ))}
-          </SlideForCategory>
+          category.product.length >= 4 &&
+            <SlideForCategory
+              key={category.id}
+              category={category.name}
+              numberOfProducts={category.product.length}
+            >
+              {category.product.map(product => (
+                <Cards 
+                  key={product.id}
+                  img={product.images[0].path}
+                  name={product.name}
+                  currentPrice={product.promotional_price}
+                  oldPrice={product.price}
+                  stars={product.stars}
+                  discount={category.bankslip_discount}
+                />
+              ))}
+            </SlideForCategory>
         ) 
       }
       <Newsletter />

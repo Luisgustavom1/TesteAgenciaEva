@@ -21,9 +21,11 @@ export type ProductType = {
   price: string,
   promotional_price: string,
   stars: number
+  id: string,
 }
 
 export type CategoriesType = {
+  id: string,
   bankslip_discount: number,
   name: string,
   product: ProductType[]
