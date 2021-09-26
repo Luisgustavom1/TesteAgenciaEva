@@ -1,6 +1,4 @@
-import { ReactNode, useState } from 'react';
-
-import arrowRight from '../../assets/svg/Scroll Arrow Right.svg';
+import { ReactNode, useEffect, useState } from 'react';
 
 import { CardsSlide, Container } from './styles';
 
@@ -12,8 +10,12 @@ interface SlideContainerProps {
 const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => {
   const [numberOfSlides, setNumberOfSlides] = useState(0);
   
+  useEffect(() => {
+    console.log(numberOfSlides);
+    
+  })
   function previousSlide() {
-    // slide anterior positivo
+    // slide anterior é positivo
     if(numberOfSlides === 0) {
       return;
     }
@@ -21,8 +23,8 @@ const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => 
   }
 
   function nextSlide() {
-    // proximo slide negativo
-    if(- numberOfSlides > (numberOfProducts - 4)) {
+    // proximo slide é negativo
+    if(- numberOfSlides > (numberOfProducts - 5)) {
       return;
     }
     setNumberOfSlides(numberOfSlides - 1);

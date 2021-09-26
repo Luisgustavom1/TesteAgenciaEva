@@ -24,12 +24,11 @@ export const Container = styled.section<ContainerProps>`
 `;
 
 export const AsideStyle = styled.aside`
-  width: 80vw;
   height: 100%;
 
   color: ${theme.bwWhite};
   
-  padding: 12.6rem 0;
+  padding: 12.6rem 15%;
     
   margin: 0 auto;
   h1 {
@@ -39,6 +38,8 @@ export const AsideStyle = styled.aside`
   p {
     font-size: 2.4rem;
   }
+
+  
 `;
 
 export const CountBanner = styled.span`

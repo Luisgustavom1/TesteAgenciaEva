@@ -109,7 +109,7 @@ export const Container = styled.div`
 
       border-radius: .8rem;
 
-      margin: 1.2rem auto 0 auto;
+      margin: 1.6rem auto 0 auto;
 
       opacity: 0; 
       transition: opacity 250ms;

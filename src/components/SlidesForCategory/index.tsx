@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 interface SlideForCategoryProps {
   children: ReactNode;
-  category: string; 
+  category?: string; 
   numberOfProducts: number;
 }
 
@@ -14,7 +14,7 @@ const SlideForCategory = ({ children, category, numberOfProducts }: SlideForCate
     <Container>
       <div>
         <span />
-        <h1>Destaques em {category}</h1>
+        <h1>Destaques {category && 'em ' + category}</h1>
       </div>
       <SlideContainer
         numberOfProducts={numberOfProducts}

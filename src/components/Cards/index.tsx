@@ -1,6 +1,8 @@
 import { Container } from './styles';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ProductType } from '../../Types/types';
+import ShoppingCartContext from '../../Context/ShoppingCart';
 
 interface CardsProps {
   img: string;
@@ -9,9 +11,11 @@ interface CardsProps {
   oldPrice: string;
   discount: number;
   stars: number;
+  product: ProductType
 }
 
-const Cards = ({ img, name, currentPrice, oldPrice, discount, stars }: CardsProps) => {
+const Cards = ({ img, name, currentPrice, oldPrice, discount, stars, product }: CardsProps) => {
+  const { addProduct } = useContext(ShoppingCartContext);
   const [fullStars, setFullStars] = useState(Array(stars).fill(true).concat(Array(5 - stars).fill(false)));
 
   function formatPrice(price: number) {
@@ -55,7 +59,9 @@ const Cards = ({ img, name, currentPrice, oldPrice, discount, stars }: CardsProp
           ou {formatPrice((Number(currentPrice) * (1 - discount / 100)))} com {discount}% off no boleto
         </p>
       </section>
-      <button>
+      <button
+        onClick={() => addProduct(product)}
+      >
         Comprar
       </button>
     </Container>

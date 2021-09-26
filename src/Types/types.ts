@@ -11,17 +11,25 @@ export type typeTheme = {
     brandPrimaryDark: string
 } 
 
-export type ProductType = {
+export interface ProductType {
+  id: string,
+  name: string,
+  stars: number,
+  price: string,
+  promotional_price: string,
   images: [
     {
       path: string
     }
   ],
-  name: string,
-  price: string,
-  promotional_price: string,
-  stars: number
-  id: string,
+}
+
+export interface OnlyProduct extends ProductType{
+  category: {
+    id: string,
+    name: string,
+    bankslip_discount: number
+  }
 }
 
 export type CategoriesType = {
@@ -30,3 +38,12 @@ export type CategoriesType = {
   name: string,
   product: ProductType[]
 }
+
+export interface ShoppingCart extends ProductType{
+  shoppingCartQuantity: number
+}
+
+export interface ShoppingCartContextData {
+  shoppingCart: ShoppingCart[],
+  addProduct: (product: ProductType) => void 
+} 

@@ -27,7 +27,7 @@ export const CardsSlide = styled.div<CardsSlideProps>`
 
   > div {
     transition: transform 500ms ease-in-out;
-    transform: ${({ numberOfSlides }) => `translateX(${numberOfSlides * (23.6 + 3.2) }rem)`};
+    transform: ${({ numberOfSlides }) => `translateX(${ numberOfSlides * (23.6 + 3.2) }rem)`};
 
     flex: none;
   }
