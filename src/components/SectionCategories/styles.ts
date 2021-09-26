@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  width: 80vw;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12%;
   
   margin: 0 auto;
 

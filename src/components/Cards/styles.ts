@@ -23,6 +23,7 @@ export const Container = styled.div`
         border: 1px solid ${theme.brandPrimary};
       }
     }
+
     &:hover {
       animation: growthCard 250ms ease-in forwards;
       button {
@@ -58,47 +59,45 @@ export const Container = styled.div`
 
       text-align: left;
     }
-    section { 
 
-      .containerStars {
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        gap: .2rem;
+    .containerStars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        margin-bottom: .8rem;  
-      }
-            
-      .stars {
-        width: 1.46rem;
-        height: 1.4rem;
-      }
+      gap: .2rem;
 
-      .oldPrice {
-        color: ${theme.bwBlack2};
-
-        font-size: 1.2rem;
-        text-align: right;
-
-        padding-right: 5.4rem;
-
-        text-decoration: line-through;
-      }
-      
-      .currentPrice {
-        font-size: 3.2rem;
-        font-weight: 700;
-
-        color: ${theme.brandPrimary};
-      }
-
-      .discount {
-        font-size: 1rem;
-      }
+      margin-bottom: .8rem;  
+    }
+          
+    .stars {
+      width: 1.46rem;
+      height: 1.4rem;
     }
 
-    
+    .oldPrice {
+      color: ${theme.bwBlack2};
+
+      font-size: 1.2rem;
+      text-align: right;
+
+      padding-right: 5.4rem;
+
+      text-decoration: line-through;
+    }
+      
+    .currentPrice {
+      font-size: 3.2rem;
+      font-weight: 700;
+
+      color: ${theme.brandPrimary};
+    }
+
+    .discount {
+      font-size: 1rem;
+    }
+  
     button {
       background-color: ${theme.brandPrimary};
       color: white;

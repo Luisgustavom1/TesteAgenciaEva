@@ -1,3 +1,4 @@
+import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
 
 interface ContainerProps {
@@ -16,6 +17,7 @@ export const Container = styled.header<ContainerProps>`
     justify-content: space-between;
 
     user-select: none;
+
     > div {
       width: 90%;
 
@@ -62,7 +64,7 @@ export const Container = styled.header<ContainerProps>`
         flex-direction: column;
         justify-content: flex-start;
 
-        gap: 5rem;
+        gap: 4rem;
 
         padding-top: 5rem;
 
@@ -156,6 +158,63 @@ export const ContainerDropdown = styled.span`
 
           &:last-child {
             border-radius: 0 0 .4rem .4rem;
+          }
+        }
+      }
+    }
+
+    @media(max-width: 730px) {      
+      display: flex;
+      flex-direction: column;
+      
+      text-align: center;
+      
+      width: 40%;
+
+      border-bottom: 1px solid ${transparentize(.5, theme.bwWhite2)};
+      border-top: 1px solid ${transparentize(.5, theme.bwWhite2)};
+
+      padding: 3rem 0;
+      &:hover {
+        color: ${theme.bwWhite1};
+      }
+
+      p {
+        font-size: 2.3rem;
+
+        &:hover {
+          cursor: auto;
+        }
+      }
+
+      img {
+        width: 1.8rem;
+        height: 2rem;
+      }
+
+      nav {
+        color: ${theme.bwWhite1};
+
+        ul {
+          transform: rotateX(0);
+          opacity: 1;
+
+          position: relative;
+
+          right: 0;
+          top: 0;
+
+          li {
+            background-color: transparent;
+            font-size: 1.7rem;
+
+            & + li {
+              border: 0;
+            }
+
+            &:hover {
+              background-color: transparent;
+            }
           }
         }
       }

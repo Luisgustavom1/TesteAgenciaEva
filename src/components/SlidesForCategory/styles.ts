@@ -6,9 +6,7 @@ export const Container = styled.div`
   margin: 6.4rem auto 0 auto;
 
   > div {
-    padding-bottom: 4.2rem;
-
-    width: 80vw;
+    padding: 0 0 4.2rem 13%;
 
     margin: 0 auto;
     h1 {
