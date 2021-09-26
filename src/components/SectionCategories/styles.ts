@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-
   display: flex;
-  justify-content: center;
-  gap: 12%;
+  justify-content: space-between;
   
-  margin: 0 auto;
+  padding: 0 15.5%;
 
-  @media(max-width: 890px) {
+  @media(max-width: 900px) {
     flex-direction: column;
     align-items: center;
 
