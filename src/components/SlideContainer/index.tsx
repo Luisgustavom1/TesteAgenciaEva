@@ -9,11 +9,8 @@ interface SlideContainerProps {
 
 const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => {
   const [numberOfSlides, setNumberOfSlides] = useState(0);
-  
-  useEffect(() => {
-    console.log(numberOfSlides);
-    
-  })
+  const [viewportWidth, setViewportWidth] = useState<number>({} as number);
+
   function previousSlide() {
     // slide anterior é positivo
     if(numberOfSlides === 0) {
@@ -22,13 +19,24 @@ const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => 
     setNumberOfSlides(numberOfSlides + 1);
   }
 
+  const quantityOfSliders = viewportWidth < 620 ? 2 : viewportWidth < 900 ? 3 : viewportWidth < 1150 ? 4 : 5 
+
   function nextSlide() {
     // proximo slide é negativo
-    if(- numberOfSlides > (numberOfProducts - 5)) {
+    if(- numberOfSlides > (numberOfProducts - quantityOfSliders)) {
       return;
     }
     setNumberOfSlides(numberOfSlides - 1);
   }
+
+  useEffect(() => {    
+    function handleWidth() {
+      setViewportWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleWidth);
+    return () => window.removeEventListener('resize', handleWidth);
+  }, [])
 
   return(
     <Container>
