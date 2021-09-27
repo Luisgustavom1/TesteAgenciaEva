@@ -36,21 +36,17 @@ const Pages: React.FC = () => {
       <Banner />
       <SectionIllustration />
       <SectionCategories />
-      {/* <SlideForCategory
+      <SlideForCategory
         numberOfProducts={allProducts.length}
       >
         {allProducts.map(product => (
           <Cards
             key={product.id}
-            img={product.images[0].path}
-            name={product.name}
-            currentPrice={product.promotional_price}
-            oldPrice={product.price}
-            stars={product.stars}
             discount={product.category.bankslip_discount}
+            product={product}
           />
         ))}
-      </SlideForCategory> */}
+      </SlideForCategory>
       {
         categories.map(category => 
 
@@ -63,11 +59,6 @@ const Pages: React.FC = () => {
               {category.product.map(product => (
                 <Cards 
                   key={product.id}
-                  img={product.images[0].path}
-                  name={product.name}
-                  currentPrice={product.promotional_price}
-                  oldPrice={product.price}
-                  stars={product.stars}
                   discount={category.bankslip_discount}
                   product={product}
                 />

@@ -5,17 +5,14 @@ import { ProductType } from '../../Types/types';
 import ShoppingCartContext from '../../Context/ShoppingCart';
 
 interface CardsProps {
-  img: string;
-  name: string;
-  currentPrice: string;
-  oldPrice: string;
   discount: number;
-  stars: number;
   product: ProductType
 }
 
-const Cards = ({ img, name, currentPrice, oldPrice, discount, stars, product }: CardsProps) => {
+const Cards = ({ discount, product }: CardsProps) => {
+  const { stars, name, promotional_price, price, images } = product;
   const { addProduct } = useContext(ShoppingCartContext);
+  
   const [fullStars, setFullStars] = useState(Array(stars).fill(true).concat(Array(5 - stars).fill(false)));
 
   function formatPrice(price: number) {
@@ -31,7 +28,7 @@ const Cards = ({ img, name, currentPrice, oldPrice, discount, stars, product }: 
         className='containerImg'
       >
         <img
-          src={img}
+          src={images[0].path}
           alt={`${name} imagem`}
         />
       </div>
@@ -51,12 +48,12 @@ const Cards = ({ img, name, currentPrice, oldPrice, discount, stars, product }: 
               </svg>
           )}
         </span>
-        <p className='oldPrice'>{formatPrice(Number(oldPrice))}</p>
+        <p className='oldPrice'>{formatPrice(Number(price))}</p>
         <h3 className='currentPrice'>
-          {formatPrice(Number(currentPrice))}
+          {formatPrice(Number(promotional_price))}
         </h3>
         <p className='discount'>
-          ou {formatPrice((Number(currentPrice) * (1 - discount / 100)))} com {discount}% off no boleto
+          ou {formatPrice((Number(promotional_price) * (1 - discount / 100)))} com {discount}% off no boleto
         </p>
       </section>
       <button

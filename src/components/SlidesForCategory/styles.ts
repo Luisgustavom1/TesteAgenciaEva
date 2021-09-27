@@ -8,7 +8,6 @@ export const Container = styled.div`
   > div {
     padding: 0 0 4.2rem 15.5%;
 
-    margin: 0 auto;
     h1 {
       font-size: 2.4rem;
     }

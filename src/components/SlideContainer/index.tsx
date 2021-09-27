@@ -19,7 +19,7 @@ const SlideContainer = ({ children, numberOfProducts }: SlideContainerProps) => 
     setNumberOfSlides(numberOfSlides + 1);
   }
 
-  const quantityOfSliders = viewportWidth < 620 ? 2 : viewportWidth < 900 ? 3 : viewportWidth < 1150 ? 4 : 5 
+  const quantityOfSliders = viewportWidth < 620 ? 2 : viewportWidth < 900 ? 3 : viewportWidth < 1150 ? 4 : 5; 
 
   function nextSlide() {
     // proximo slide é negativo

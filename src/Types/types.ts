@@ -45,5 +45,5 @@ export interface ShoppingCart extends ProductType{
 
 export interface ShoppingCartContextData {
   shoppingCart: ShoppingCart[],
-  addProduct: (product: ProductType) => void 
+  addProduct: (product: ProductType | OnlyProduct) => void 
 } 
