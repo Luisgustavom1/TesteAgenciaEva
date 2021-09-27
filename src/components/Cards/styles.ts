@@ -119,5 +119,13 @@ export const Container = styled.div`
         filter: brightness(.9)
       }
     }
+
+    @media(max-width: 600px) {
+      height: 45.2rem; 
+
+      button {
+        opacity: 1;
+      }
+    }
   `}
 `;
