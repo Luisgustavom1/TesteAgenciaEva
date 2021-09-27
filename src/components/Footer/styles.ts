@@ -19,7 +19,7 @@ export const Container = styled.footer`
       display: flex;
 
       width: 10rem;
-      height: .2rem;
+      height: .4rem;
       
       background-color: ${theme.bwWhite};
 

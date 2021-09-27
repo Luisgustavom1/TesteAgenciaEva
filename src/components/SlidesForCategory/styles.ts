@@ -15,7 +15,7 @@ export const Container = styled.div`
       display: flex;
 
       width: 6.4rem;
-      height: .6rem;
+      height: .8rem;
 
       background-color: ${({ theme }) => theme.brandPrimary};
     }
