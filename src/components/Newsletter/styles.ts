@@ -14,8 +14,8 @@ export const Container = styled.div`
     margin-top: 4rem;
     
     svg {
-      width: 4.86rem;
-      height: 3.93rem;
+      width: 5.4rem;
+      height: 4.2rem;
     }
 
     section {
