@@ -120,7 +120,7 @@ export const Container = styled.div`
       }
     }
 
-    @media(max-width: 600px) {
+    @media(max-width: 768px) {
       height: 45.2rem; 
 
       button {
