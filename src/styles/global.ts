@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
       list-style: none;
     } 
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1015px) {
       html {
         font-size: 55%;
       }

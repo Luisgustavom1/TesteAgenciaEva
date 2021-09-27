@@ -102,7 +102,7 @@ export const Busca = styled.div`
 
   background-color: ${({ theme }) => theme.bwWhite};
 
-  border-radius: .5rem;
+  border-radius: 5px;
 
   padding: 0 1rem;
 
@@ -153,11 +153,11 @@ export const ContainerDropdown = styled.span`
           }
 
           &:first-child {
-            border-radius: .4rem .4rem 0 0;
+            border-radius: 4px 4px 0 0;
           }
 
           &:last-child {
-            border-radius: 0 0 .4rem .4rem;
+            border-radius: 0 0 4px 4px;
           }
         }
       }
